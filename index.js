@@ -26,25 +26,25 @@ let message = (function () {
         switch (messageType) {
             case 'invalidNumber':
                 // args[0] = string that was passed but was not a number
-                message = 'Argument must be a valid number but ' + chalk.red.bold(args[0]) + ' was found';
+                message = `Argument must be a valid number but ${chalk.red.bold(args[0])} was found`;
                 break;
             case 'incorrectArgumentsLength':
                 // args[0] = length of arguments required, args[q] = length of arguments found
-                message = 'Required ' + args[0] + ' arguments but ' + chalk.red.bold(args[1]) + ' were found';
+                message = `Required ${args[0]} arguments but ${chalk.red.bold(args[1])} were found`;
                 break;
             case 'foundAllAvailable':
                 // args[0] = number of taken npm package names, args[1] = number of available npm package names found
-                message = 'Found ' + chalk.red.bold(args[0]) + ' taken and ' + chalk.green.bold(args[1]) + ' available NPM package names';
+                message = `Found ${chalk.red.bold(args[0])} taken and ${chalk.green.bold(args[1])} available NPM package names`;
                 break;
             case 'configIsNotPopulated':
-                message = 'Available NPM package names unknown.\n\nTry running ' + chalk.blue.bold(PACKAGE_NAME + ' -f') + ' first to find available NPM package names';
+                message = `Available NPM package names unknown.\n\nTry running ${chalk.blue.bold(PACKAGE_NAME + ' -f')} first to find available NPM package names`;
                 break;
             case 'directoryDoesNotExist':
                 // args[0] = directory passed as argument that does not exist
-                message = args[0] + ' is not a valid directory';
+                message = `${args[0]} is not a valid directory`;
                 break;
             case 'unixWordsFileDoesNotExist':
-                message = 'Unable to find unix words file\n\nThis package only works on a unix system with the ' + chalk.blue.bold('/usr/share/dict/words') + ' file present';
+                message = `Unable to find unix words file\n\nThis package only works on a unix system with the ${chalk.blue.bold('/usr/share/dict/words')} file present`;
                 break;
             case 'noOptionsOrIncompatibleOptions':
                 message = 'Either no options were passed or options passed were incompatible with each other';
@@ -53,20 +53,20 @@ let message = (function () {
                 // args[0] = limit, args[1] = number of matches, args[2] = matches
                 if (args[0] === null || args[0] > 0) {
                     if (args[0] !== null && args[0] < args[1]) {
-                        message = 'Found ' + chalk.green.bold(args[1]) + ' available NPM package names, displaying ' + chalk.blue.bold(args[0]) + ':\n\n' + args[2];
+                        message = `Found ${chalk.green.bold(args[1])} available NPM package names, displaying ${chalk.blue.bold(args[0])}:\n\n${args[2]}`;
                     } else {
-                        message = 'Found ' + chalk.green.bold(args[1]) + ' available NPM package names:\n\n' + args[2];
+                        message = `Found ${chalk.green.bold(args[1])} available NPM package names:\n\n${args[2]}`;
                     }
                 } else {
-                    message = 'Found ' + chalk.red.bold(0) + ' available NPM package names';
+                    message = `Found ${chalk.red.bold(0)} available NPM package names`;
                 }
                 break;
             case 'configSavedToDirectory':
                 // args[0] = filepath of the saved .json file
-                message = 'Saved available NPM package names to ' + chalk.blue.bold(args[0]);
+                message = `Saved available NPM package names to ${chalk.blue.bold(args[0])}`;
                 break;
             default:
-                message = 'There was an unknown error; feel free to report this on ' + chalk.blue.bold('https://www.npmjs.com/') + ' or ' + chalk.blue.bold('https://wwww.github.com/');
+                message = `There was an unknown error; feel free to report this on ${chalk.blue.bold('https://www.npmjs.com/package/appelator')} or ${chalk.blue.bold('https://github.com/joshuatvernon/appelator')}`;
         }
         return message;
     }
@@ -327,7 +327,7 @@ const run = () => {
 }
 
 program
-    .version('1.0.3')
+    .version('1.0.4')
     .usage('[options]')
     .option('-f --find', 'find available and taken npm package names')
     .option('-s --save [directory]', 'save available and taken npm package names to .json file in directory')
