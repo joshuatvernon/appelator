@@ -1,0 +1,20 @@
+{
+    "name": "appelator",
+    "version": "1.0.0",
+    "description": "A quick and dirty CLI tool for finding available NPM package names",
+    "main": "npm-available-package-names.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Joshua Vernon",
+    "license": "MIT",
+    "dependencies": {
+        "all-the-package-names": "^1.3545.0",
+        "chalk": "^2.4.1",
+        "commander": "^2.16.0",
+        "fs-extra": "^6.0.1"
+    },
+    "bin": {
+        "appelator": "index.js"
+    }
+}
