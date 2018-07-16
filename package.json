@@ -1,6 +1,6 @@
 {
     "name": "appelator",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A quick and dirty CLI tool for finding available NPM package names",
     "main": "npm-available-package-names.js",
     "scripts": {
