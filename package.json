@@ -2,7 +2,7 @@
     "name": "appelator",
     "version": "1.0.2",
     "description": "A quick and dirty CLI tool for finding available NPM package names",
-    "main": "npm-available-package-names.js",
+    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -17,6 +17,14 @@
     "bin": {
         "appelator": "index.js"
     },
+    "keywords": [
+        "available",
+        "name",
+        "names",
+        "naming",
+        "package",
+        "packages"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/joshuatvernon/appelator"
