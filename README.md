@@ -1,8 +1,17 @@
 # 🖋️ Appelator
 
-A quick and dirty CLI tool for finding available NPM package names
+A quick and dirty CLI tool for finding available NPM package names.
 
-## Setup
+```
+appellation
+/ˌapəˈleɪʃ(ə)n
+
+noun
+    * a name or title
+    * the action of giving a name to someone or something.
+```
+
+### Setup
 
 Install `appelator` as a global NPM CLI tool
 ```sh
@@ -19,7 +28,7 @@ Optionall save taken and available NPM package names to an external `.json` file
 λ appelator --save [directory]
 ```
 
-## Search
+### Search
 
 Output a random available NPM package name
 ```sh
@@ -46,7 +55,7 @@ puppylike
 puppysnatch
 ```
 
-# Filtering
+### Filtering
 
 Use `--limit` to output a specific number of available NPM packages
 ```sh

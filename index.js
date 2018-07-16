@@ -327,7 +327,7 @@ const run = () => {
 }
 
 program
-    .version('1.0.0')
+    .version('1.0.1')
     .usage('[options]')
     .option('-f --find', 'find available and taken npm package names')
     .option('-s --save [directory]', 'save available and taken npm package names to .json file in directory')
